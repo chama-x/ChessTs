@@ -25,9 +25,35 @@ Build professional chess applications without the complexity. We've done the har
 
 ## 🚀 Quick Start
 
+### Installation
+
+1. Create a new React project (if you haven't already):
+```bash
+npx create-react-app my-chess-app --template typescript
+# or
+npm create vite@latest my-chess-app -- --template react-ts
+```
+
+2. Install the package:
 ```bash
 npm install reactchessts
 ```
+
+> 💡 **Troubleshooting Installation**
+> 
+> If you encounter peer dependency issues, you can:
+> 1. Make sure you have React 16.8 or higher installed:
+>    ```bash
+>    npm install react@latest react-dom@latest
+>    ```
+> 2. Or use one of these flags (if you know what you're doing):
+>    ```bash
+>    npm install reactchessts --legacy-peer-deps
+>    # or
+>    npm install reactchessts --force
+>    ```
+
+### Basic Usage
 
 ```tsx
 import { ChessBoard, ChessProvider, PieceProvider } from 'reactchessts';
@@ -44,6 +70,7 @@ export default function App() {
 ```
 
 That's it! You now have a fully functional chess game with:
+
 - ♟️ Drag and drop moves
 - ✅ Legal move validation
 - 🎮 Game state management
@@ -53,6 +80,7 @@ That's it! You now have a fully functional chess game with:
 ## 🎨 Beautiful Examples (Copy-Paste Ready)
 
 ### 1. Professional Chess Game
+
 ```tsx
 import { ChessBoard, ChessProvider, PieceProvider, useChess } from 'reactchessts';
 
@@ -80,6 +108,7 @@ function ChessGame() {
 ```
 
 ### 2. Training Platform
+
 ```tsx
 import { useChessTraining } from 'reactchessts';
 
