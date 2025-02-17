@@ -80,13 +80,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chama-x/ChessTs"
+    "url": "git+https://github.com/chama-x/ReactChessTs.git"
   },
   "bugs": {
     "url": "https://github.com/chama-x/ChessTs/issues"
   },
   "homepage": "https://github.com/chama-x/ChessTs#readme",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "@chama-x:registry": "https://npm.pkg.github.com"
   }
 }
