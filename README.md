@@ -1,5 +1,3 @@
-# ReactChessTS 🎮♟️
-
 <div align="center">
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&height=200&text=ReactChessTS&color=0:BE0039,50:BE0055,100:BE0071&fontColor=ffffff&fontSize=50&animation=fadeIn" alt="ReactChessTS Banner" style="max-width: 100%; height: auto;">
