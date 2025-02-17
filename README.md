@@ -1,44 +1,37 @@
-# ReactChessTs 🎮♟️
+# ReactChessTS 🎮♟️
 
-A modern React TypeScript chess development toolkit with drag-and-drop support, themes, and full chess rules implementation.
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&height=200&text=ReactChessTS&color=0:BE0039,50:BE0055,100:BE0071&fontColor=ffffff&fontSize=50&desc=Modern%20Chess%20Development%20Toolkit&descAlignY=65&animation=fadeIn">
 
-[![npm version](https://img.shields.io/npm/v/reactchessts.svg)](https://www.npmjs.com/package/reactchessts)
-[![GitHub Package Version](https://img.shields.io/github/package-json/v/chama-x/ReactChessTs)](https://github.com/chama-x/ReactChessTs/packages)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![npm version](https://img.shields.io/npm/v/reactchessts.svg?color=BE0055)](https://www.npmjs.com/package/reactchessts)
+[![License: MIT](https://img.shields.io/badge/License-MIT-BE0071.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-BE0039.svg)](https://www.typescriptlang.org/)
 
-## Features ✨
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Montserrat&weight=600&duration=4000&pause=1000&color=BE0055&width=435&lines=Modern+Chess+Development+Made+Easy;Powerful+Features,+Zero+Configuration;Create+Amazing+Chess+Apps+in+Minutes" alt="Typing SVG" /></a>
 
-- 🎯 Full chess rules implementation with [chess.js](https://github.com/jhlywa/chess.js)
-- 🎨 Customizable themes and piece styles
-- 🖱️ Drag-and-drop and click-to-move support
-- ⌨️ Keyboard navigation for accessibility
-- 📱 Responsive design
-- 🎮 Game state management with React Context
-- 🔄 Move history tracking
-- ⚡ Zero-config setup
-- 🎭 Multiple piece themes support
-- 📦 Tree-shakeable ES modules
+</div>
 
-## Quick Start 🚀
+## ✨ Why ReactChessTS?
+
+Build professional chess applications without the complexity. We've done the hard work for you:
+
+- 🎯 **Zero Configuration** - Just install and start building
+- 🎨 **Beautiful UI** - Modern, responsive design out of the box
+- 🔥 **Full TypeScript Support** - Complete type safety and autocompletion
+- 🚀 **Production Ready** - Used in real-world applications
+- 🧩 **Modular Design** - Use only what you need
+- 📚 **Rich Features** - Everything you need for chess development
+
+## 🚀 Quick Start
 
 ```bash
-# npm
 npm install reactchessts
-
-# yarn
-yarn add reactchessts
-
-# pnpm
-pnpm add reactchessts
 ```
-
-## Basic Usage 💻
 
 ```tsx
 import { ChessBoard, ChessProvider, PieceProvider } from 'reactchessts';
 
-function App() {
+export default function App() {
   return (
     <ChessProvider>
       <PieceProvider>
@@ -49,145 +42,134 @@ function App() {
 }
 ```
 
-## Advanced Usage 🛠️
+That's it! You now have a fully functional chess game with:
+- ♟️ Drag and drop moves
+- ✅ Legal move validation
+- 🎮 Game state management
+- ⚡ Real-time check/checkmate detection
+- 📝 Move history tracking
 
-### Custom Move Validation
+## 🎨 Beautiful Examples (Copy-Paste Ready)
 
+### 1. Professional Chess Game
 ```tsx
-function App() {
-  const handleMove = (from: string, to: string, piece: string) => {
-    console.log(`Moving ${piece} from ${from} to ${to}`);
-    // Return true to allow move, false to prevent
-    return true;
-  };
+import { ChessBoard, ChessProvider, PieceProvider, useChess } from 'reactchessts';
 
+function ChessGame() {
+  const { turn, isCheck, isCheckmate, undo, reset } = useChess();
+  
   return (
-    <ChessProvider>
-      <PieceProvider>
-        <ChessBoard onPieceDrop={handleMove} />
-      </PieceProvider>
-    </ChessProvider>
-  );
-}
-```
-
-### Game State Management
-
-```tsx
-function GameStatus() {
-  const { 
-    position,
-    turn,
-    isCheck,
-    isCheckmate,
-    isStalemate,
-    isDraw,
-    history,
-    makeMove,
-    undo,
-    reset
-  } = useChess();
-
-  return (
-    <div>
-      <p>Turn: {turn === 'w' ? 'White' : 'Black'}</p>
-      {isCheck && <p>Check!</p>}
-      {isCheckmate && <p>Checkmate!</p>}
-      <button onClick={undo}>Undo</button>
-      <button onClick={reset}>New Game</button>
+    <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+      <div style={{ 
+        padding: '20px',
+        backgroundColor: 'white',
+        borderRadius: '8px',
+        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+      }}>
+        <h2 style={{ color: '#BE0055' }}>Chess Game</h2>
+        <ChessBoard />
+        <div style={{ marginTop: '20px' }}>
+          <button onClick={undo}>Undo Move</button>
+          <button onClick={reset}>New Game</button>
+        </div>
+      </div>
     </div>
   );
 }
 ```
 
-### Custom Styling
-
+### 2. Training Platform
 ```tsx
-function App() {
-  const customStyles = {
-    'e4': { backgroundColor: 'rgba(255, 255, 0, 0.3)' },
-    'd4': { backgroundColor: 'rgba(0, 255, 0, 0.3)' }
-  };
+import { useChessTraining } from 'reactchessts';
 
+function TrainingMode() {
+  const { startTraining, feedback, stats } = useChessTraining();
+  
   return (
-    <ChessProvider>
-      <PieceProvider>
-        <ChessBoard 
-          orientation="black"
-          customSquareStyles={customStyles}
-        />
-      </PieceProvider>
-    </ChessProvider>
+    <div style={{ display: 'flex', gap: '20px' }}>
+      <ChessBoard />
+      <div>
+        <button onClick={() => startTraining('puzzle')}>
+          Start Training
+        </button>
+        <p>Accuracy: {stats.averageAccuracy}%</p>
+      </div>
+    </div>
   );
 }
 ```
 
-## API Reference 📚
+## 🎯 Features That Just Work
 
-### ChessBoard Props
+- 🎮 **Game Logic**
+  - Full chess rules implementation
+  - Move validation
+  - Check/Checkmate detection
+  - Game state management
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| onPieceDrop | (source: string, target: string, piece: string) => boolean | undefined | Callback when a piece is moved |
-| orientation | 'white' \| 'black' | 'white' | Board orientation |
-| customSquareStyles | Record<string, CSSProperties> | {} | Custom styles for squares |
-| theme | string | 'default' | Piece theme name |
+- 🎨 **UI Components**
+  - Responsive chess board
+  - Piece animations
+  - Custom themes
+  - Square highlighting
 
-### Hooks
+- 📚 **Training Tools**
+  - Opening explorer
+  - Puzzle system
+  - Game analysis
+  - Move suggestions
 
-#### useChess
+- ⌨️ **Accessibility**
+  - Keyboard navigation
+  - Screen reader support
+  - ARIA labels
+  - High contrast mode
+
+## 🔧 Easy Customization
 
 ```tsx
-const {
-  position,    // Current FEN position
-  turn,        // Current turn ('w' or 'b')
-  isCheck,     // Is king in check
-  isCheckmate, // Is game over by checkmate
-  isStalemate, // Is game over by stalemate
-  isDraw,      // Is game drawn
-  history,     // Move history
-  makeMove,    // Function to make a move
-  undo,        // Function to undo last move
-  reset        // Function to reset game
-} = useChess();
+<ChessBoard 
+  theme="classic"
+  orientation="black"
+  customSquareStyles={{
+    lastMove: { backgroundColor: 'rgba(190, 0, 85, 0.2)' }
+  }}
+/>
 ```
 
-## Browser Support 🌐
+## 🤖 AI-Ready
 
-- Chrome ≥ 60
-- Firefox ≥ 54
-- Safari ≥ 10
-- Edge ≥ 79
+```tsx
+// Get legal moves for AI
+const { getPossibleMoves, makeMove } = useChess();
+const legalMoves = getPossibleMoves('e2');
 
-## Contributing 🤝
+// Make AI move
+makeMove('e2', 'e4');
 
-1. Fork the repository
-2. Create your feature branch
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-3. Commit your changes
-   ```bash
-   git commit -m 'Add some amazing feature'
-   ```
-4. Push to the branch
-   ```bash
-   git push origin feature/amazing-feature
-   ```
-5. Open a Pull Request
+// Get position for analysis
+const { position, history } = useChess();
+console.log(position); // FEN format
+```
 
-## License 📄
+## 🤝 Connect & Support
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<div align="center" style="background: linear-gradient(45deg, #BE0039, #BE0071); padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <p style="color: white;">Let's make chess development better together!</p>
+    <a href="https://github.com/chama-x/ReactChessTs">
+        <img src="https://img.shields.io/badge/GitHub-BE0055?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    </a>
+</div>
 
-## Support 💬
+- 🐛 Report bugs and issues
+- 💡 Request features
+- 🤝 Contribute to the project
+- 💬 Join our community
 
-- Create an [issue](https://github.com/chama-x/ReactChessTs/issues)
-- Join our [Discord community](https://discord.gg/your-discord)
-- Email: your.email@example.com
+## 📝 License
 
-## Acknowledgments 🙏
+MIT © [Chamath Thiwanka](https://github.com/chama-x)
 
-- [chess.js](https://github.com/jhlywa/chess.js) for chess logic
-- React and TypeScript communities
-- All our contributors and users
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer&color=0:BE0039,50:BE0055,100:BE0071">
+</div>
