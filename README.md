@@ -1,4 +1,4 @@
-# ChessTs
+# ReactChessTs
 
 A modern React TypeScript chess development toolkit. This project provides a fully-featured chess game implementation with a beautiful and responsive UI.
 
@@ -17,13 +17,13 @@ A modern React TypeScript chess development toolkit. This project provides a ful
 ## Installation
 
 ```bash
-npm install chess-ts
+npm install reactchessts
 ```
 
 ## Usage
 
 ```typescript
-import { ChessBoard, ChessProvider, PieceProvider } from 'chess-ts';
+import { ChessBoard, ChessProvider, PieceProvider } from 'reactchessts';
 
 function App() {
   return (
