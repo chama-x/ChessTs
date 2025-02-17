@@ -1,5 +1,5 @@
 {
-  "name": "reactchessts",
+  "name": "@chama-x/reactchessts",
   "version": "0.1.0",
   "description": "A modern React TypeScript chess development toolkit",
   "type": "module",
@@ -88,7 +88,6 @@
   "homepage": "https://github.com/chama-x/ChessTs#readme",
   "publishConfig": {
     "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "@chama-x:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
