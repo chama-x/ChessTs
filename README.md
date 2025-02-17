@@ -1,7 +1,10 @@
 # ReactChessTS 🎮♟️
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&height=200&text=ReactChessTS&color=0:BE0039,50:BE0055,100:BE0071&fontColor=ffffff&fontSize=50&desc=Modern%20Chess%20Development%20Toolkit&descAlignY=65&animation=fadeIn">
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&text=ReactChessTS&color=0:BE0039,50:BE0055,100:BE0071&fontColor=ffffff&fontSize=50&animation=fadeIn" alt="ReactChessTS Banner" style="max-width: 100%; height: auto;">
+</div>
+
 
 [![npm version](https://img.shields.io/npm/v/reactchessts.svg?color=BE0055)](https://www.npmjs.com/package/reactchessts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-BE0071.svg)](https://opensource.org/licenses/MIT)
