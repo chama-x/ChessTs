@@ -1,0 +1,37 @@
+{
+  "puzzles": [
+    {
+      "id": "M1-001",
+      "fen": "3qk3/R7/n4N2/8/8/8/8/4K3 w - - 0 1",
+      "moves": ["Ra8"],
+      "category": "mate-in-one",
+      "difficulty": 1,
+      "rating": 1200,
+      "themes": ["backrank", "queen"],
+      "explanation": "White delivers checkmate by exploiting the back rank weakness",
+      "hint": "Look for a move that attacks the king on the back rank"
+    },
+    {
+      "id": "F-001",
+      "fen": "r1bqkb1r/pppp1ppp/2n2n2/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 1",
+      "moves": ["Nxe5"],
+      "category": "fork",
+      "difficulty": 2,
+      "rating": 1400,
+      "themes": ["knight-fork", "tactical"],
+      "explanation": "Knight fork attacking both the queen and rook",
+      "hint": "Look for a knight move that attacks multiple pieces"
+    },
+    {
+      "id": "P-001",
+      "fen": "4k3/8/8/8/4p3/8/3P4/4K3 w - - 0 1",
+      "moves": ["d4"],
+      "category": "endgame",
+      "difficulty": 1,
+      "rating": 1300,
+      "themes": ["pawn-endgame", "opposition"],
+      "explanation": "White gains the opposition and prevents Black's pawn from advancing",
+      "hint": "Use your pawn to control the key squares"
+    }
+  ]
+} 

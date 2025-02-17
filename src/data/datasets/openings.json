@@ -1,0 +1,49 @@
+{
+  "openings": [
+    {
+      "eco": "B20",
+      "name": "Sicilian Defense",
+      "moves": ["e4", "c5"],
+      "fen": "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 2",
+      "explanation": [
+        "Black immediately fights for the center with a flank pawn",
+        "Creates imbalanced positions with many tactical opportunities"
+      ],
+      "variations": [
+        {
+          "name": "Closed Sicilian",
+          "moves": ["e4", "c5", "Nc3"],
+          "explanation": "White aims for a slower, more positional game"
+        },
+        {
+          "name": "Open Sicilian",
+          "moves": ["e4", "c5", "Nf3", "d6", "d4"],
+          "explanation": "White immediately opens the center for tactical play"
+        }
+      ]
+    },
+    {
+      "eco": "C60",
+      "name": "Ruy Lopez",
+      "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5"],
+      "fen": "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+      "explanation": [
+        "One of the oldest and most popular openings",
+        "White pins the knight and prepares to control the center",
+        "Creates long-term pressure on Black's position"
+      ],
+      "variations": [
+        {
+          "name": "Berlin Defense",
+          "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "Nf6"],
+          "explanation": "A solid defense favored by many top players"
+        },
+        {
+          "name": "Morphy Defense",
+          "moves": ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6"],
+          "explanation": "The most popular response, keeping the bishop pair"
+        }
+      ]
+    }
+  ]
+} 

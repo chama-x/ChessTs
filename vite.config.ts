@@ -46,10 +46,13 @@ export default defineConfig({
       }
     }
   },
-  assetsInclude: ['**/*.svg'],
+  assetsInclude: ['**/*.svg', '**/*.json'],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
     }
+  },
+  json: {
+    stringify: true
   }
 })
