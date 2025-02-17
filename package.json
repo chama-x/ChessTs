@@ -1,6 +1,6 @@
 {
   "name": "reactchessts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React TypeScript chess development toolkit",
   "type": "module",
   "main": "dist/index.js",
