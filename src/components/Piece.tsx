@@ -8,7 +8,7 @@ const Piece: React.FC<PieceProps> = memo(({
   piece,
   square,
   isDragging,
-  theme = 'default'
+  _theme = 'default'
 }) => {
   const { getPieceSvg } = usePieces();
   const pieceContent = getPieceSvg(piece);
@@ -79,7 +79,7 @@ const Piece: React.FC<PieceProps> = memo(({
       <img
         src={pieceContent}
         alt={`${pieceColor} ${pieceName}`}
-        className="piece-svg"
+        className="piece-svg no-drag"
         style={{
           position: 'absolute',
           inset: 0,
@@ -88,8 +88,7 @@ const Piece: React.FC<PieceProps> = memo(({
           pointerEvents: 'none',
           opacity: isDragging ? 0.8 : 1,
           filter: piece.startsWith('b') ? 'brightness(0.2)' : 'none',
-          userSelect: 'none',
-          WebkitUserDrag: 'none'
+          userSelect: 'none'
         }}
       />
     );
@@ -190,6 +189,14 @@ const Piece: React.FC<PieceProps> = memo(({
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
           border: 0;
+        }
+
+        .no-drag {
+          -webkit-user-drag: none;
+          -khtml-user-drag: none;
+          -moz-user-drag: none;
+          -o-user-drag: none;
+          user-drag: none;
         }
       `}</style>
     </>

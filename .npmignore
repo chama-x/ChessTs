@@ -1,0 +1,44 @@
+# Source
+src/
+tests/
+docs/
+
+# Config files
+.eslintrc
+.prettierrc
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+jest.config.js
+rollup.config.js
+
+# Development
+node_modules/
+coverage/
+.vscode/
+.idea/
+.git/
+.github/
+.gitignore
+
+# Build tools
+.travis.yml
+.jenkins.yml
+.gitlab-ci.yml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.*
+
+# Editor
+*.swp
+*.swo
+.DS_Store
+Thumbs.db 

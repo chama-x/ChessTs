@@ -13,7 +13,7 @@ export interface PieceProps {
   piece: PieceSymbol;
   square: string;
   isDragging: boolean;
-  theme?: string;
+  _theme?: string;
 }
 
 export interface GameState {

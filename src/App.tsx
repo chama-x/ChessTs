@@ -17,7 +17,7 @@ function GameContent() {
     makeMove 
   } = useChess();
 
-  const handlePieceDrop = (from: string, to: string, piece: string) => {
+  const handlePieceDrop = (from: string, to: string, _piece: string) => {
     return makeMove(from, to);
   };
 
